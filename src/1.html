@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Faça um programa que receba a idade de uma pessoa em: meses, dias, horas e até minutos</h1>
+
+    <input type="number" id="idade" placeholder="Informe sua idade">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div> <br>
+        Resultado : <br><br> <span id="resultado"> </span>
+    </div>
+
+
+    <!---------- JavaScript ---------->
+    <script>
+
+        function calcular() { 
+
+            //entrada 
+            let idade = parseInt ( document.getElementById('idade').value );
+
+            //processamento
+            let idadeMeses = idade * 12;
+            let idadeDias = idade * 365;
+            let idadeHoras = idadeDias * 24;
+            let idadeMinutos = idadeHoras * 60;
+
+            //saída
+            document.getElementById('resultado').innerHTML = 'Idade em meses' + idadeMeses + '<br>' + '<br>'
+            document.getElementById('resultado').innerHTML += 'Idade em Dias' + idadeDias + '<br>' + '<br>'
+            document.getElementById('resultado').innerHTML += 'Idade em Horas' + idadeHoras  + '<br>' + '<br>'
+            document.getElementById('resultado').innerHTML += 'Idade em Minutos' + idadeMinutos; 
+
+            // alert('Idade em meses' + idadeMeses);
+            // alert('Idade em Dias' + idadeDias);
+            // alert('Idade em Horas' + idadeHoras);
+            // alert('Idade em Minutos' + idadeMinutos);
+
+        }
+        
+    </script>
+
+</body>
+</html>
